@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "VeronQ\\WordpressYAML\\": "src/",
+            "VeronQ\\WordpressYAML\\": "src/"
         }
     },
     "require": {
