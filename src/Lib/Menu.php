@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
+use VeronQ\WordPressYAML\Config;
 
 /**
  * Class Menu

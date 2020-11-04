@@ -6,6 +6,7 @@ namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
 use VeronQ\WordpressYAML\Traits\DefaultArgsTrait;
+use VeronQ\WordPressYAML\Config;
 
 /**
  * Class Sidebar
