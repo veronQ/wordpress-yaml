@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace VeronQ\WordpressYAML;
 
+use VeronQ\WordpressYAML\Lib;
+
 /**
  * Class Config
  * @package VeronQ\WordpressYAML
@@ -18,7 +20,7 @@ class Config
   public static function menu(string $filename)
   {
     if (function_exists('wp')) {
-      new Menu($filename);
+      new Lib\Menu($filename);
     }
   }
 
@@ -28,7 +30,7 @@ class Config
   public static function editorColor(string $filename)
   {
     if (function_exists('wp')) {
-      new EditorColor($filename);
+      new Lib\EditorColor($filename);
     }
   }
 
@@ -39,7 +41,7 @@ class Config
   public static function sidebar(string $filename, array $defaultArgs = [])
   {
     if (function_exists('wp')) {
-      new Sidebar($filename, $defaultArgs);
+      new Lib\Sidebar($filename, $defaultArgs);
     }
   }
 
@@ -50,7 +52,7 @@ class Config
   public static function size(string $filename, array $defaultArgs = [])
   {
     if (function_exists('wp')) {
-      new Size($filename, $defaultArgs);
+      new Lib\Size($filename, $defaultArgs);
     }
   }
 
@@ -61,7 +63,7 @@ class Config
   public static function postType($filename, array $defaultArgs = [])
   {
     if (function_exists('wp')) {
-      new PostType($filename, $defaultArgs);
+      new Lib\PostType($filename, $defaultArgs);
     }
   }
 }

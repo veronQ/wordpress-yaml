@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace VeronQ\WordpressYAML;
+namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
 
