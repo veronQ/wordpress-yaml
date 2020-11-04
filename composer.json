@@ -1,0 +1,26 @@
+{
+    "name": "veronq/wordpress-yaml",
+    "description": "Fast WordPress configuration using YAML Syntax",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "WordPress",
+        "YAML",
+        "Symfony"
+    ],
+    "authors": [
+        {
+            "name": "veronQ",
+            "email": "qve.veron@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "veronq\\wordpressYAML\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/yaml": "^5.1",
+        "php": ">=7.4"
+    }
+}

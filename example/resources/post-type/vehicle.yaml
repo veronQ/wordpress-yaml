@@ -1,0 +1,17 @@
+vehicle:
+  labels:
+    name: "Vehicle"
+  public: true
+  has_archive: true
+  show_in_rest: true
+  menu_icon: "dashicons-car"
+  supports:
+    - "title"
+    - "thumbnail"
+    - "page-attributes"
+    - "editor"
+    - "excerpt"
+    - "comments"
+  rewrite:
+    with_front: false
+    slug: "vehicle"

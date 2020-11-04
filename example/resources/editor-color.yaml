@@ -1,0 +1,12 @@
+-
+  slug: "brand-primary"
+  name: "Main color"
+  color: "#e84e1b"
+-
+  slug: "success"
+  name: "Success"
+  color: "#48bb78"
+-
+  slug: "error"
+  name: "Error"
+  color: "#f56565"
