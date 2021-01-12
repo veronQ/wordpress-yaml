@@ -7,7 +7,7 @@
 
 ## Requirements
 
-* `PHP` >= 7.4
+* `PHP` >= 7.2
 * `WordPress` >= 5.0
 
 ## Installation

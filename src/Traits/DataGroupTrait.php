@@ -12,7 +12,7 @@ use Symfony\Component\Yaml\Yaml;
  */
 trait DataGroupTrait
 {
-  protected array $data = [];
+  protected $data = [];
 
   /**
    * @param string|array $filename

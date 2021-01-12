@@ -10,7 +10,7 @@ namespace VeronQ\WordpressYAML\Traits;
  */
 trait DefaultArgsTrait
 {
-  protected array $defaultArgs;
+  protected $defaultArgs;
 
   /**
    * @return array
