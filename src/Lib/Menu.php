@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
-use VeronQ\WordPressYAML\Config;
 
 /**
  * Class Menu
@@ -24,7 +23,7 @@ class Menu
   {
     $this->getDataYAML($filename);
 
-    add_action('after_setup_theme', [$this, 'registerMenus'], Config::$priority);
+    add_action('after_setup_theme', [$this, 'registerMenus'], PHP_INT_MAX);
   }
 
   /**

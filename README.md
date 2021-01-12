@@ -63,17 +63,6 @@ Add two new custom image sizes.
 
 ## API
 
-### Config::$priority
-
-Type:  `int`  
-Default: `PHP_INT_MAX`
-
-```php
-Config::$priority = 100;
-```
-
-Set the priority value used for internal configuration hooks.
-
 ### Config::EditorColor($filename)
 
 #### $filename (required)

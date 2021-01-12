@@ -6,7 +6,6 @@ namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
 use VeronQ\WordpressYAML\Traits\DefaultArgsTrait;
-use VeronQ\WordPressYAML\Config;
 
 /**
  * Class Size
@@ -34,8 +33,8 @@ class Size
     $this->getDataYAML($filename);
     $this->setDefaultArgs(self::FN_BASE_ARGS, $defaultArgs);
 
-    add_action('after_setup_theme', [$this, 'registerImageSizes'], Config::$priority);
-    add_filter('image_size_names_choose', [$this, 'filterImageNames'], Config::$priority);
+    add_action('after_setup_theme', [$this, 'registerImageSizes'], PHP_INT_MAX);
+    add_filter('image_size_names_choose', [$this, 'filterImageNames'], PHP_INT_MAX);
   }
 
   /**

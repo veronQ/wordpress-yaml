@@ -6,7 +6,6 @@ namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
 use VeronQ\WordpressYAML\Traits\DefaultArgsTrait;
-use VeronQ\WordPressYAML\Config;
 
 /**
  * Class Sidebar
@@ -28,7 +27,7 @@ class Sidebar
     $this->getDataYAML($filename);
     $this->setDefaultArgs($defaultArgs);
 
-    add_action('widgets_init', [$this, 'registerSidebars'], Config::$priority);
+    add_action('widgets_init', [$this, 'registerSidebars'], PHP_INT_MAX);
   }
 
   /**

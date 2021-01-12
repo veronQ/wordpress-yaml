@@ -12,8 +12,6 @@ use VeronQ\WordpressYAML\Lib;
  */
 class Config
 {
-  public static int $priority = PHP_INT_MAX;
-
   /**
    * @param string $filename
    */

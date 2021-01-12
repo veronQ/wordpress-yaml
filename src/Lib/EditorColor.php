@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
-use VeronQ\WordPressYAML\Config;
 
 /**
  * Class EditorColor
@@ -24,7 +23,7 @@ class EditorColor
   {
     $this->getDataYAML($filename);
 
-    add_action('after_setup_theme', [$this, 'registerColorPalette'], Config::$priority);
+    add_action('after_setup_theme', [$this, 'registerColorPalette'], PHP_INT_MAX);
   }
 
   /**

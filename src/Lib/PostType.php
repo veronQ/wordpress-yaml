@@ -6,7 +6,6 @@ namespace VeronQ\WordpressYAML\Lib;
 
 use VeronQ\WordpressYAML\Traits\DataGroupTrait;
 use VeronQ\WordpressYAML\Traits\DefaultArgsTrait;
-use VeronQ\WordPressYAML\Config;
 
 /**
  * Class PostType
@@ -28,7 +27,7 @@ class PostType
     $this->getDataYAML($filename);
     $this->setDefaultArgs($defaultArgs);
 
-    add_action('init', [$this, 'registerPostTypes']);
+    add_action('init', [$this, 'registerPostTypes'], PHP_INT_MAX);
   }
 
   /**
