@@ -21,13 +21,14 @@ class Sidebar
    *
    * @param string|array $filename
    * @param array $defaultArgs
+   * @param int $priority
    */
-  public function __construct($filename, array $defaultArgs = [])
+  public function __construct($filename, array $defaultArgs = [], int $priority = PHP_INT_MAX)
   {
     $this->getDataYAML($filename);
     $this->setDefaultArgs($defaultArgs);
 
-    add_action('widgets_init', [$this, 'registerSidebars'], PHP_INT_MAX);
+    add_action('widgets_init', [$this, 'registerSidebars'], $priority);
   }
 
   /**

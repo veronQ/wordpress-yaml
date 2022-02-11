@@ -27,14 +27,15 @@ class Size
    *
    * @param string|array $filename
    * @param array $defaultArgs
+   * @param int $priority
    */
-  public function __construct($filename, array $defaultArgs = [])
+  public function __construct($filename, array $defaultArgs = [], int $priority = PHP_INT_MAX)
   {
     $this->getDataYAML($filename);
     $this->setDefaultArgs(self::FN_BASE_ARGS, $defaultArgs);
 
-    add_action('after_setup_theme', [$this, 'registerImageSizes'], PHP_INT_MAX);
-    add_filter('image_size_names_choose', [$this, 'filterImageNames'], PHP_INT_MAX);
+    add_action('after_setup_theme', [$this, 'registerImageSizes'], $priority);
+    add_filter('image_size_names_choose', [$this, 'filterImageNames'], $priority);
   }
 
   /**

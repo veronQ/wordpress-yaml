@@ -18,12 +18,13 @@ class Menu
    * Menu constructor.
    *
    * @param string|array $filename
+   * @param int $priority
    */
-  public function __construct($filename)
+  public function __construct($filename, int $priority = PHP_INT_MAX)
   {
     $this->getDataYAML($filename);
 
-    add_action('after_setup_theme', [$this, 'registerMenus'], PHP_INT_MAX);
+    add_action('after_setup_theme', [$this, 'registerMenus'], $priority);
   }
 
   /**
