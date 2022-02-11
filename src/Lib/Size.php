@@ -26,10 +26,10 @@ class Size
    * Size constructor.
    *
    * @param string|array $filename
-   * @param array $defaultArgs
    * @param int $priority
+   * @param array $defaultArgs
    */
-  public function __construct($filename, array $defaultArgs = [], int $priority = PHP_INT_MAX)
+  public function __construct($filename, int $priority, array $defaultArgs = [])
   {
     $this->getDataYAML($filename);
     $this->setDefaultArgs(self::FN_BASE_ARGS, $defaultArgs);

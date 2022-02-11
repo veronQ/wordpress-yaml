@@ -14,54 +14,69 @@ class Config
 {
   /**
    * @param string $filename
+   * @param int $priority
+   *
+   * @return void
    */
-  public static function menu(string $filename)
+  public static function menu(string $filename, int $priority = PHP_INT_MAX)
   {
     if (function_exists('wp')) {
-      new Lib\Menu($filename);
+      new Lib\Menu($filename, $priority);
     }
   }
 
   /**
    * @param string $filename
+   * @param int $priority
+   *
+   * @return void
    */
-  public static function editorColor(string $filename)
+  public static function editorColor(string $filename, int $priority = PHP_INT_MAX)
   {
     if (function_exists('wp')) {
-      new Lib\EditorColor($filename);
+      new Lib\EditorColor($filename, $priority);
     }
   }
 
   /**
    * @param string $filename
+   * @param int $priority
    * @param array $defaultArgs
+   *
+   * @return void
    */
-  public static function sidebar(string $filename, array $defaultArgs = [])
+  public static function sidebar(string $filename, int $priority = PHP_INT_MAX, array $defaultArgs = [])
   {
     if (function_exists('wp')) {
-      new Lib\Sidebar($filename, $defaultArgs);
+      new Lib\Sidebar($filename, $priority, $defaultArgs);
     }
   }
 
   /**
    * @param string $filename
+   * @param int $priority
    * @param array $defaultArgs
+   *
+   * @return void
    */
-  public static function size(string $filename, array $defaultArgs = [])
+  public static function size(string $filename, int $priority = PHP_INT_MAX, array $defaultArgs = [])
   {
     if (function_exists('wp')) {
-      new Lib\Size($filename, $defaultArgs);
+      new Lib\Size($filename, $priority, $defaultArgs);
     }
   }
 
   /**
-   * @param string|array $filename
+   * @param $filename
+   * @param int $priority
    * @param array $defaultArgs
+   *
+   * @return void
    */
-  public static function postType($filename, array $defaultArgs = [])
+  public static function postType($filename, int $priority = PHP_INT_MAX, array $defaultArgs = [])
   {
     if (function_exists('wp')) {
-      new Lib\PostType($filename, $defaultArgs);
+      new Lib\PostType($filename, $priority, $defaultArgs);
     }
   }
 }

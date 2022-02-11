@@ -20,7 +20,7 @@ class EditorColor
    * @param string|array $filename
    * @param int $priority
    */
-  public function __construct($filename, int $priority = PHP_INT_MAX)
+  public function __construct($filename, int $priority)
   {
     $this->getDataYAML($filename);
 
